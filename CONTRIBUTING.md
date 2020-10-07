@@ -3,6 +3,7 @@
 Contributing requests are always welcome. Feel free to make issues or mail me to discuss features that you want to implement.
 
 ## Making a Pull Request
+
 - Make sure that your code is good architectured and well-qualitative (use eslint and prettier).
 - Make sure that your feature supported on the same versions of Node as the library.
 - Update README.md and docs with new information if it necessary.
