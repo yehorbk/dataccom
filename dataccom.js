@@ -1,3 +1,3 @@
 'use strict';
 
-module.exports = require('./lib/fetcher');
+module.exports = require('./lib/controller');
