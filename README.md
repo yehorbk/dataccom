@@ -39,7 +39,8 @@ const result = dataccom
                  
 console.log(result);
 
-/* The result is:
+/*
+  The result is:
   { name: 'John',
     age: 20,
     university: 'Stanford University',
