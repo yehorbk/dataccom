@@ -14,7 +14,7 @@ $ npm install dataccom
 # Concept
 
 The main idea is to allow the developer to compose a query to multiple sources,
-retrieve the data and transform it according to the schema.
+retrieve the data and transform it according to the scheme.
 
 # How to Use
 
