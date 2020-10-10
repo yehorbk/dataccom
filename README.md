@@ -46,7 +46,8 @@ console.log(result);
 
 /*
   The result is:
-  { name: 'John',
+  {
+    name: 'John',
     age: 20,
     university: 'Stanford University',
     specialty: 'Software Engineering'
