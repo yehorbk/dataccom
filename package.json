@@ -1,6 +1,6 @@
 {
   "name": "dataccom",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "JavaScript library that allows you to build a request to multiple sources, combine responses and transform the result according to a scheme.",
   "license": "MIT",
   "author": "Yehor Bublyk <yehor.bk@gmail.com>",
