@@ -11,7 +11,7 @@ mocha.describe('Fetcher test', () => {
     fetcher.collect(callback('age', 27));
     fetcher.collect(callback('position', 'Developer'));
     const expected = { name: 'John', age: 27, position: 'Developer' };
-    fetcher.run(data => {
+    fetcher.multiple(data => {
       assert.deepStrictEqual(data, expected);
     });
   });
@@ -24,7 +24,7 @@ mocha.describe('Fetcher test', () => {
     fetcher.collect(callback('age', 27));
     fetcher.collect(callback('position', 'Developer'));
     const expected = { name: 'John', age: 27, position: 'Developer' };
-    fetcher.run(data => {
+    fetcher.multiple(data => {
       assert.deepStrictEqual(data, expected);
     });
   });
