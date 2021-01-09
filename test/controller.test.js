@@ -7,11 +7,11 @@ mocha.describe('Controller test', () => {
   mocha.it('Chain of simple functions without scheme', async () => {
     const callback = (name, value) => ({ [name]: value });
     const result = await controller
-      .chain()
+      .parallel()
       .fetch(callback, 'name', 'John')
       .fetch(callback, 'age', 27)
       .fetch(callback, 'position', 'Developer')
-      .collect();
+      .perform();
     const expected = { name: 'John', age: 27, position: 'Developer' };
     assert.deepStrictEqual(result, expected);
   });
@@ -23,12 +23,12 @@ mocha.describe('Controller test', () => {
       position: String,
     };
     const result = await controller
-      .chain()
+      .parallel()
       .fetch(callback, 'name', 'John')
       .fetch(callback, 'age', 27)
       .fetch(callback, 'position', 'Developer')
       .apply(scheme)
-      .collect();
+      .perform();
     const expected = { name: 'John', position: 'Developer' };
     assert.deepStrictEqual(result, expected);
   });
@@ -37,11 +37,11 @@ mocha.describe('Controller test', () => {
     const callback = (name, value) =>
       new Promise(resolve => resolve({ [name]: value }));
     const result = await controller
-      .chain()
+      .parallel()
       .fetch(callback, 'name', 'John')
       .fetch(callback, 'age', 27)
       .fetch(callback, 'position', 'Developer')
-      .collect();
+      .perform();
     const expected = { name: 'John', age: 27, position: 'Developer' };
     assert.deepStrictEqual(result, expected);
   });
@@ -54,12 +54,12 @@ mocha.describe('Controller test', () => {
       position: String,
     };
     const result = await controller
-      .chain()
+      .parallel()
       .fetch(callback, 'name', 'John')
       .fetch(callback, 'age', 27)
       .fetch(callback, 'position', 'Developer')
       .apply(scheme)
-      .collect();
+      .perform();
     const expected = { name: 'John', position: 'Developer' };
     assert.deepStrictEqual(result, expected);
   });
